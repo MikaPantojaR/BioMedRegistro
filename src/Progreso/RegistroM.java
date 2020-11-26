@@ -47,7 +47,6 @@ public class RegistroM extends javax.swing.JFrame {
         rbt_hombre = new javax.swing.JRadioButton();
         rbt_Mujer = new javax.swing.JRadioButton();
         jbl_Fecha = new javax.swing.JLabel();
-        dtc_fecha = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
         label_status = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -137,9 +136,6 @@ public class RegistroM extends javax.swing.JFrame {
         jbl_Fecha.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jbl_Fecha.setText("Fecha de nacimiento ");
         getContentPane().add(jbl_Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
-
-        dtc_fecha.setBackground(new java.awt.Color(0, 204, 204));
-        getContentPane().add(dtc_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 210, -1));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Progreso/add.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +229,6 @@ public class RegistroM extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cmb_especialidad;
-    private com.toedter.calendar.JDateChooser dtc_fecha;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
