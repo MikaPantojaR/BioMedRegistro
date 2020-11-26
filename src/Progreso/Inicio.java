@@ -35,8 +35,9 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txt_Usuario = new javax.swing.JTextField();
-        txt_Contraseña = new javax.swing.JPasswordField();
+        logingUserName = new javax.swing.JTextField();
+        logingPasword = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
         jLabel_Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,25 +47,54 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, 70));
 
-        txt_Usuario.setBackground(new java.awt.Color(102, 0, 102));
-        txt_Usuario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txt_Usuario.setForeground(new java.awt.Color(255, 255, 255));
-        txt_Usuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_Usuario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 330, 210, -1));
+        logingUserName.setBackground(new java.awt.Color(102, 0, 102));
+        logingUserName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        logingUserName.setForeground(new java.awt.Color(255, 255, 255));
+        logingUserName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        logingUserName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        logingUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logingUserNameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(logingUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 330, 210, -1));
 
-        txt_Contraseña.setBackground(new java.awt.Color(102, 0, 102));
-        txt_Contraseña.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txt_Contraseña.setForeground(new java.awt.Color(255, 255, 255));
-        txt_Contraseña.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_Contraseña.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 370, 210, -1));
+        logingPasword.setBackground(new java.awt.Color(102, 0, 102));
+        logingPasword.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        logingPasword.setForeground(new java.awt.Color(255, 255, 255));
+        logingPasword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        logingPasword.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(logingPasword, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 370, 210, -1));
+
+        jButton1.setText("Loging");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
 
         jLabel_Wallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Progreso/fondo3.0.jpg"))); // NOI18N
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void logingUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logingUserNameActionPerformed
+
+
+    }//GEN-LAST:event_logingUserNameActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        String userName = logingUserName.getText().trim(); //capturando los datos escritos en el textbox
+        String userPasword = logingPasword.getText().trim(); 
+        if (userName.equals("Admin")&&userPasword.equals("Admin"))
+        {
+            new RegistroE().setVisible(true);
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,9 +132,10 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_Wallpaper;
-    private javax.swing.JPasswordField txt_Contraseña;
-    private javax.swing.JTextField txt_Usuario;
+    private javax.swing.JPasswordField logingPasword;
+    private javax.swing.JTextField logingUserName;
     // End of variables declaration//GEN-END:variables
 }
